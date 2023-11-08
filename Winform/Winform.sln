@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominios", "Dominios\Dominios.csproj", "{491A6841-2AEE-4028-A875-D5DF4B6F3654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winform", "winform\winform.csproj", "{C1578914-3AB4-4F2E-81D4-942FD0EB7769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarcraftDatos", "WarcraftDatos\WarcraftDatos.csproj", "{B423AE22-2E2D-4059-A761-2645394766F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{491A6841-2AEE-4028-A875-D5DF4B6F3654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491A6841-2AEE-4028-A875-D5DF4B6F3654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491A6841-2AEE-4028-A875-D5DF4B6F3654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491A6841-2AEE-4028-A875-D5DF4B6F3654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1578914-3AB4-4F2E-81D4-942FD0EB7769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1578914-3AB4-4F2E-81D4-942FD0EB7769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1578914-3AB4-4F2E-81D4-942FD0EB7769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1578914-3AB4-4F2E-81D4-942FD0EB7769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B423AE22-2E2D-4059-A761-2645394766F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B423AE22-2E2D-4059-A761-2645394766F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B423AE22-2E2D-4059-A761-2645394766F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B423AE22-2E2D-4059-A761-2645394766F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43727213-0454-42DC-9F3F-D10370C5A340}
+	EndGlobalSection
+EndGlobal
