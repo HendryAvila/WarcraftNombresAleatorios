@@ -11,6 +11,10 @@ namespace Dominios
         public int ID { get; set; }
         public string nombreRaza { get; set; }
         public string UrlImagen { get; set; }
+        public override string ToString()
+        {
+            return nombreRaza;
+        }
 
     }
 }

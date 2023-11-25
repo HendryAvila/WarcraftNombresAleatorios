@@ -10,6 +10,10 @@ namespace Dominios
     {
         public int ID { get; set; }
         public string nombreTipoPersonaje { get; set; }
+        public override string ToString()
+        {
+            return nombreTipoPersonaje;
+        }
 
     }
 }

@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeneroDato.cs" />
+    <Compile Include="NicknameDatos.cs" />
+    <Compile Include="NicknameMostrarDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazaDatos.cs" />
     <Compile Include="TipoPersonajeDato.cs" />

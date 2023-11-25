@@ -15,7 +15,7 @@ namespace winform
 {
     public partial class Form1 : Form
     {
-            private List<Raza> listaRaza; //creo un atributo privado de tipo lista para poder manipular la lista
+        private List<Raza> listaRaza; //creo un atributo privado de tipo lista para poder manipular la lista
         private List<Genero> listaGenero; //creo un atributo privado de tipo lista para poder manipular la lista
         private List<TipoPersonaje> listaTipoPersonaje; //creo un atributo privado de tipo lista para poder manipular la lista
         public Form1()
@@ -48,7 +48,15 @@ namespace winform
 
         }
 
-        private void comboBoxRaza_SelectionChangeCommitted(object sender, EventArgs e)
+   
+
+        private void agregarNicknamesDataBaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarPalabras ventana = new AgregarPalabras();
+            ventana.ShowDialog();
+        }
+
+        private void comboBoxRaza_SelectionChangeCommitted_1(object sender, EventArgs e)
         {
             Raza Seleccionada = (Raza)comboBoxRaza.SelectedItem;
             string UrlImagen = Seleccionada.UrlImagen;
@@ -60,13 +68,39 @@ namespace winform
             try
             {
                 pictureBoximagenRaza.Load(imagen);
+                pictureBoximagenRaza.BackColor = Color.Transparent;
+
 
             }
             catch (Exception ex)
             {
                 //todo una exepcion
                 pictureBoximagenRaza.Load("https://th.bing.com/th/id/OIP.dxt2_gkvMt-3ZUVo8RF9SQHaHa?pid=ImgDet&rs=1"); // si no carga nada que me cargue esa imagen
-            } 
-    } 
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.SendToBack(); // Esto enviará el PictureBox de fondo al fondo.
+
+        }
+
+        private void pictureBoximagenRaza_Click(object sender, EventArgs e)
+        {
+            pictureBoximagenRaza.BackColor = Color.Transparent;
+        }
+
+       
+
+        private void mostrarNickGaurdadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VIsualizarNicks ventana = new VIsualizarNicks();
+            ventana.ShowDialog();
+            
+        }
+
+        
+
+        
     }
 }
