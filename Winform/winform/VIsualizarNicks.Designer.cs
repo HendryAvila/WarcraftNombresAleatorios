@@ -40,15 +40,15 @@
             this.dataGridViewVisualizar.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewVisualizar.Name = "dataGridViewVisualizar";
             this.dataGridViewVisualizar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewVisualizar.Size = new System.Drawing.Size(455, 456);
+            this.dataGridViewVisualizar.Size = new System.Drawing.Size(494, 456);
             this.dataGridViewVisualizar.TabIndex = 0;
             this.dataGridViewVisualizar.SelectionChanged += new System.EventHandler(this.dataGridViewVisualizar_SelectionChanged);
             // 
             // buttonModificar
             // 
-            this.buttonModificar.Location = new System.Drawing.Point(487, 12);
+            this.buttonModificar.Location = new System.Drawing.Point(512, 12);
             this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(89, 34);
+            this.buttonModificar.Size = new System.Drawing.Size(64, 34);
             this.buttonModificar.TabIndex = 1;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;

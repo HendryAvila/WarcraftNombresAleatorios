@@ -17,7 +17,7 @@ namespace winform
     {
         
 
-        private List<NicknamesMostrar> listanickmostrar;
+        private List<Nickname> listanickmostrar;
         public VIsualizarNicks()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace winform
 
         public void dataGridViewVisualizar_SelectionChanged(object sender, EventArgs e)
         {
-            NicknamesMostrar seleccionado = (NicknamesMostrar)dataGridViewVisualizar.CurrentRow.DataBoundItem;
+            Nickname seleccionado = (Nickname)dataGridViewVisualizar.CurrentRow.DataBoundItem;
 
         }
         public void cargar()
@@ -36,6 +36,10 @@ namespace winform
             {
                 listanickmostrar = datos.MostrarNicks();
                 dataGridViewVisualizar.DataSource = listanickmostrar;
+                
+                //
+
+
 
             }
             catch (Exception ex)
@@ -57,8 +61,8 @@ namespace winform
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            NicknamesMostrar seleccionado;
-            seleccionado = (NicknamesMostrar)dataGridViewVisualizar.CurrentRow.DataBoundItem;
+            Nickname seleccionado;
+            seleccionado = (Nickname)dataGridViewVisualizar.CurrentRow.DataBoundItem;
 
             AgregarPalabras modificar = new AgregarPalabras(seleccionado);
             modificar.ShowDialog();

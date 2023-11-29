@@ -70,6 +70,11 @@ namespace WarcraftDatos
 
                 throw ex;
             }
+
+        }
+        public void SetearParametros(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
         }
 
     }

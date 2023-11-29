@@ -8,7 +8,7 @@ namespace Dominios
 {
    public class Genero
     {
-        public int ID { get; set; }
+        public int id { get; set; }
         public string Generos { get; set; }
         public override string ToString()
         {

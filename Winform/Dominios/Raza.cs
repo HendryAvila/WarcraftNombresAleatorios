@@ -8,12 +8,12 @@ namespace Dominios
 {
     public class Raza
     {
-        public int ID { get; set; }
-        public string nombreRaza { get; set; }
+        public int id { get; set; }
+        public string Nombreraza { get; set; }
         public string UrlImagen { get; set; }
         public override string ToString()
         {
-            return nombreRaza;
+            return Nombreraza;
         }
 
     }

@@ -22,7 +22,7 @@ namespace WarcraftDatos
                 {
                     Raza aux = new Raza();
 
-                    aux.nombreRaza = (string)datos.Lector["NombreRaza"]; // Cambiado el tipo de aux a string
+                    aux.Nombreraza = (string)datos.Lector["NombreRaza"]; // Cambiado el tipo de aux a string
                     aux.UrlImagen = (string)datos.Lector["UrlImagen"];
                     lista.Add(aux);
                 }

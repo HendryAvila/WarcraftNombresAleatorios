@@ -8,10 +8,11 @@ namespace Dominios
 {
     public class Nickname
     {
-        public string nickname { get; set; }
-        public Raza Nombreraza { get; set; }
-        public Genero genero { get; set; }
-        public TipoPersonaje TipoPersonaje { get; set; }
-       
+        public int id { get; set; }
+        public string nicknames { get; set; }
+        public string nombreraza { get; set; }
+        public string genero { get; set; }
+        public string NombreTipoPersonaje { get; set; }
+
     }
 }

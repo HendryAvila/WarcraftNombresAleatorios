@@ -10,28 +10,30 @@ namespace WarcraftDatos
 {
     public class NicknameMostrarDatos
     {
-       public  List<NicknamesMostrar> MostrarNicks()
+       public  List<Nickname> MostrarNicks()
         {
-            List<NicknamesMostrar> listaMostrar = new List<NicknamesMostrar>();
+            List<Nickname> listaMostrar = new List<Nickname>();
             WarcraftBaseDatos datos = new WarcraftBaseDatos();
 
             try
             {
-                datos.SetearConsulta("select nicknames, NombreRaza, Genero, NombreTipoPersonaje from Nicks");
+                datos.SetearConsulta("select  id, nicknames, NombreRaza, Genero, NombreTipoPersonaje from Nicks");
                 datos.Ejecutarlectura();
 
                 while (datos.Lector.Read())
 
                 {
-                    NicknamesMostrar aux = new NicknamesMostrar();
+                    Nickname aux = new Nickname();
+                    if (!(datos.Lector["id"] is DBNull))
+                        aux.id = (int)datos.Lector["id"];
                     if (!(datos.Lector["nicknames"] is DBNull))
                     aux.nicknames = (string)datos.Lector["nicknames"];
                     if (!(datos.Lector["NombreRaza"] is DBNull))
-                        aux.raza= (string)datos.Lector["NombreRaza"];
+                        aux.nombreraza= (string)datos.Lector["NombreRaza"];
                     if (!(datos.Lector["Genero"] is DBNull))
                         aux.genero = (string)datos.Lector["Genero"];
                     if (!(datos.Lector["NombreTipoPersonaje"] is DBNull))
-                        aux.tipopersonaje = (string)datos.Lector["NombreTipoPersonaje"];
+                        aux.NombreTipoPersonaje = (string)datos.Lector["NombreTipoPersonaje"];
 
                     listaMostrar.Add(aux);
                 }

@@ -16,15 +16,17 @@ namespace winform
     public partial class AgregarPalabras : Form
     {
 
-        private NicknamesMostrar nicknamesmostrar = null;
+        private Nickname nickname = null;
+       
         public AgregarPalabras() //duplicando los "initialize" y pasando por parametros hago un pasaje entre ventanas
         {
             InitializeComponent();//se ejecuta al agregar
         }
-        public AgregarPalabras(NicknamesMostrar nicknamesMostrar)
+        public AgregarPalabras(Nickname nickname)
         {
             InitializeComponent();//se ejecuta al modificar
-            this.nicknamesmostrar = nicknamesMostrar;
+            this.nickname = nickname;
+            Text = "Modificar Nickname";
         }
 
         private void buttonCancelarAgregar_Click(object sender, EventArgs e)
@@ -34,20 +36,39 @@ namespace winform
 
         private void buttonAgregarname_Click(object sender, EventArgs e)
         {
-            Nickname nick = new Nickname();
+            //Nickname nick = new Nickname();
             NicknameDatos agregarnick = new NicknameDatos();
-            Raza raza = new Raza();
-            RazaDatos rdatos = new RazaDatos();
+            
+           
+            
             try
             {
-                nick.nickname = textBoxAgregarNick.Text;               
-                nick.Nombreraza = (Raza)comboBoxRazaAG.SelectedItem;
-                nick.genero = (Genero)comboBoxGeneroAG.SelectedItem;
-                nick.TipoPersonaje = (TipoPersonaje)comboBoxClaseAG.SelectedItem;
+                if(nickname == null)
+                nickname  = new Nickname();
+                
+                nickname.nicknames = textBoxAgregarNick.Text;
+                //nickname.nombreraza = (string)comboBoxRazaAG.SelectedItem;
+                nickname.nombreraza = ((Dominios.Raza)comboBoxRazaAG.SelectedItem).Nombreraza;
 
+                //nickname.genero = (string)comboBoxGeneroAG.SelectedItem;
+                nickname.genero = ((Dominios.Genero)comboBoxGeneroAG.SelectedItem).Generos;
 
-                agregarnick.agregar(nick);
+                //nickname.NombreTipoPersonaje = (string)comboBoxClaseAG.SelectedItem;
+                nickname.NombreTipoPersonaje = ((Dominios.TipoPersonaje)comboBoxClaseAG.SelectedItem).nombreTipoPersonaje;
+
+                if (nickname.id != 0)
+                {
+                agregarnick.modificar(nickname);
+                MessageBox.Show("Se modifico exitosamente");
+
+                }
+                else
+                {
+                agregarnick.agregar(nickname);
                 MessageBox.Show("Se agrego exitosamente");
+                
+
+                }
                 Close();
             }
             catch (Exception ex)
@@ -70,23 +91,30 @@ namespace winform
             {
             comboBoxRazaAG.DataSource = razadatos.ListarRaza();//invoco la pediticion de datoa de la clase RAZA DATOS
             comboBoxRazaAG.DisplayMember = "NombreRaza";
+            //comboBoxRazaAG.ValueMember = "id";
             comboBoxRazaAG.DropDownStyle = ComboBoxStyle.DropDownList;
 
             comboBoxGeneroAG.DataSource = generodato.ListarGeneros();
             comboBoxGeneroAG.DisplayMember = "Genero";
+            //comboBoxGeneroAG.ValueMember = "id";
             comboBoxGeneroAG.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
             comboBoxClaseAG.DataSource = tipoPersonajeDato.ListarClase();
             comboBoxClaseAG.DisplayMember = "NombreTipoPersonaje";
+            //comboBoxClaseAG.ValueMember = "id";
             comboBoxClaseAG.DropDownStyle = ComboBoxStyle.DropDownList;
 
-             if (nicknamesmostrar != null)
+             if (nickname != null)
                 {
-                    textBoxAgregarNick.Text = nicknamesmostrar.nicknames;
-                    comboBoxRazaAG.Text = nicknamesmostrar.raza;
-                    comboBoxGeneroAG.Text = nicknamesmostrar.genero;
-                    comboBoxClaseAG.Text = nicknamesmostrar.tipopersonaje;
+                    textBoxAgregarNick.Text = nickname.nicknames;
+                    comboBoxRazaAG.Text = nickname.nombreraza;
+                    comboBoxGeneroAG.Text = nickname.genero;
+                    comboBoxClaseAG.Text = nickname.NombreTipoPersonaje;
+
+                   //comboBoxRazaAG.SelectedValue = nickname.id;
+                   //comboBoxGeneroAG.SelectedValue = nickname.id;
+                   // comboBoxClaseAG.SelectedValue = nickname.id; 
                 }   
 
             }
