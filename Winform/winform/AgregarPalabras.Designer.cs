@@ -148,6 +148,7 @@
             // 
             this.comboBoxRazaAG.DataSource = this.razaBindingSource1;
             this.comboBoxRazaAG.DisplayMember = "NombreRaza";
+            this.comboBoxRazaAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRazaAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.comboBoxRazaAG.FormattingEnabled = true;
             this.comboBoxRazaAG.Location = new System.Drawing.Point(142, 150);
@@ -170,6 +171,7 @@
             // 
             this.comboBoxGeneroAG.DataSource = this.generoBindingSource;
             this.comboBoxGeneroAG.DisplayMember = "Genero";
+            this.comboBoxGeneroAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGeneroAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.comboBoxGeneroAG.FormattingEnabled = true;
             this.comboBoxGeneroAG.Location = new System.Drawing.Point(142, 187);
@@ -191,6 +193,7 @@
             // 
             this.comboBoxClaseAG.DataSource = this.tipoDePersonajeBindingSource;
             this.comboBoxClaseAG.DisplayMember = "NombreTipoPersonaje";
+            this.comboBoxClaseAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClaseAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.comboBoxClaseAG.FormattingEnabled = true;
             this.comboBoxClaseAG.Location = new System.Drawing.Point(142, 223);

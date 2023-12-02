@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Dominios;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics.Eventing.Reader;
 
 namespace WarcraftDatos
 {
@@ -77,5 +78,8 @@ namespace WarcraftDatos
             comando.Parameters.AddWithValue(nombre, valor);
         }
 
+        
+        
     }
 }
+

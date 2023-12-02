@@ -55,6 +55,29 @@ namespace WarcraftDatos
                 datos.CerrarConexion();
             }       
         }
+        public void Eliminar(int id)
+        {
+            try
+            {
+                WarcraftBaseDatos datos = new WarcraftBaseDatos();
+                datos.SetearConsulta("Delete from Nicks where id = @id");
+                datos.SetearParametros("@id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public void EliminarLogico(int id)
+        {
+            WarcraftBaseDatos datos = new WarcraftBaseDatos();
+            datos.SetearConsulta("UPDATE Nicks SET Activo = 0 WHERE id = @id");
+            datos.SetearParametros("@id", id);
+            datos.ejecutarAccion();
+        }
 
     }
 }

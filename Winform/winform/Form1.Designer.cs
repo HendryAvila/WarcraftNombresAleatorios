@@ -35,8 +35,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.agregarNicknamesDataBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarNickGaurdadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.modificarNicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoximagenRaza)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,17 +56,18 @@
             // 
             // comboBoxRaza
             // 
+            this.comboBoxRaza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRaza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.comboBoxRaza.FormattingEnabled = true;
             this.comboBoxRaza.Location = new System.Drawing.Point(302, 409);
             this.comboBoxRaza.Name = "comboBoxRaza";
             this.comboBoxRaza.Size = new System.Drawing.Size(137, 23);
             this.comboBoxRaza.TabIndex = 1;
-           
             this.comboBoxRaza.SelectionChangeCommitted += new System.EventHandler(this.comboBoxRaza_SelectionChangeCommitted_1);
             // 
             // comboBoxGenero
             // 
+            this.comboBoxGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.comboBoxGenero.FormattingEnabled = true;
             this.comboBoxGenero.Location = new System.Drawing.Point(302, 439);
@@ -76,6 +77,7 @@
             // 
             // comboBoxClase
             // 
+            this.comboBoxClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.comboBoxClase.FormattingEnabled = true;
             this.comboBoxClase.Location = new System.Drawing.Point(302, 470);
@@ -94,7 +96,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(721, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
-         
             // 
             // agregarNicknamesDataBaseToolStripMenuItem
             // 
@@ -110,6 +111,12 @@
             this.mostrarNickGaurdadosToolStripMenuItem.Text = "Mostrar Nick Gaurdados";
             this.mostrarNickGaurdadosToolStripMenuItem.Click += new System.EventHandler(this.mostrarNickGaurdadosToolStripMenuItem_Click);
             // 
+            // modificarNicksToolStripMenuItem
+            // 
+            this.modificarNicksToolStripMenuItem.Name = "modificarNicksToolStripMenuItem";
+            this.modificarNicksToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.modificarNicksToolStripMenuItem.Text = "Modificar Nicks";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::winform.Properties.Resources.OIG;
@@ -120,13 +127,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // modificarNicksToolStripMenuItem
-            // 
-            this.modificarNicksToolStripMenuItem.Name = "modificarNicksToolStripMenuItem";
-            this.modificarNicksToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.modificarNicksToolStripMenuItem.Text = "Modificar Nicks";
-           
             // 
             // Form1
             // 
